@@ -1,2 +1,11 @@
-<h1>{{title}}</h1>
-<h2>Welcome to the Angular Bootcamp Workshop #2</h2>
+<h1>{{ title }}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/employees">Employees</a>
+</nav>
+<div class="container">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <aside><app-messages></app-messages></aside>
+</div>

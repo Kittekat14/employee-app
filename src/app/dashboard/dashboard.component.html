@@ -1,0 +1,10 @@
+<h2>Top Employees</h2>
+<div class="employees-menu">
+  <a
+    *ngFor="let employee of topEmployees"
+    routerLink="/employees/detail/{{ employee.id }}"
+    target="_blank"
+  >
+    {{ employee.name }}
+  </a>
+</div>

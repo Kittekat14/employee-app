@@ -1,0 +1,9 @@
+<div class="messages-container">
+  <h3 class="title">Events</h3>
+  <ul *ngIf="messagesService.messages.length">
+    <li *ngFor="let message of messagesService.messages!!" class="message">
+      {{ message }}
+    </li>
+  </ul>
+  <button (click)="messagesService.clear()">clear</button>
+</div>

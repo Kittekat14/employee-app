@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AppComponent } from './app.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AppRoutingModule } from './app-routing.module';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   imports: [
@@ -15,8 +18,10 @@ import { AppComponent } from './app.component';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     }),
+    DashboardModule,
+    AppRoutingModule,
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, MessagesComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
